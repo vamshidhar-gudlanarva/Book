@@ -19,16 +19,17 @@ public class Publisher {
     private String state;
     private String zip;
 
-//    @OneToMany(mappedBy = "publishers")
-//    private Set<Book> books = new HashSet<Book>();
-//
-//    public Set<Book> getBooks() {
-//        return books;
-//    }
-//
-//    public void setBooks(Set<Book> books) {
-//        this.books = books;
-//    }
+
+    @OneToMany(mappedBy = "publisher")
+   private Set<Book> books = new HashSet<Book>();
+
+    public Set<Book> getBooks() {
+        return books;
+    }
+
+    public void setBooks(Set<Book> books) {
+        this.books = books;
+    }
 
     public Long getId() {
         return id;
